@@ -1,0 +1,423 @@
+body{
+  padding: 0;
+margin: 0;
+background-color: rgb(248, 239, 227);
+}
+html{
+  scroll-behavior: smooth;
+}
+
+.background-img{
+position: relative;
+overflow: hidden;
+height: 600px;
+
+}
+.background-img::before{
+z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+ filter: blur(3px) brightness(0.5);
+    background-image: url(https://cdn.britannica.com/84/203584-050-57D326E5/speed-internet-technology-background.jpg);
+}
+.nav-bar{
+    display: flex;
+    margin-top: 15px;
+}
+.logo-nav{
+    font-size: 30px;
+    font-family:sans-serif;
+    margin-left: 8px;
+    color: rgb(255, 255, 255);
+}
+.nav-nav{
+margin-left: auto;
+margin-right: 20px;
+font-family:sans-serif;
+margin-top: 13px;
+}
+nav a{
+  padding: 15px;
+}
+.li-nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.li-nav a:hover{
+    color: rgb(233, 118, 3);
+}
+.ul-nav{
+    list-style-type: none;
+}
+.bn5 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: #000;
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+.bn5:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.computer-img{
+margin-top: 70px;
+border-radius: 50px;
+}
+.body{
+    display: flex;
+    margin-left: 130px;
+}
+.right-side{
+margin-top: 100px;
+margin-left: 110px;
+color:aliceblue;
+}
+.web-dev-text1{
+    font-size:40px;
+    color: rgba(255, 255, 255, 0.886);
+}
+.learn-more{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+ }
+ 
+ button.learn-more {
+  width: 12rem;
+  height: auto;
+ }
+ 
+ button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #ffffff;
+  border-right: 0.125rem solid #ffffff;
+  transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #a9a9a9;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+  width: 100%;
+ }
+ 
+ button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+ }
+ 
+ button:hover .button-text {
+  color: #fff;
+ }
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Style for the login form */
+  .login-form {
+    background: #f2c27e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 25%;
+    text-align: center;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  #name,#lname{
+    opacity: 50%;
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+
+  }
+  .login-h2{
+    color: #4b0c00;
+  }
+  .label{
+    color:  #5a3737;
+    margin-right: 95px;
+  }
+  .login-button{
+    background-color: rgb(127, 69, 252);
+    border: none;
+    color: aliceblue;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 12px;
+    margin-inline: 10px;
+  }
+  .login-button:hover{
+    background-color: rgb(76, 0, 239);
+  }
+  .web-dev{
+margin-top: 110px;
+margin-left: 30px;
+font-size: 30px;
+color: rgb(0, 22, 120);
+margin-bottom: 0;
+  }
+  .hr1{
+    margin-top: 100px;
+  }
+  .navigation-2{
+    display: flex;
+  }
+
+  .nav-bar1 a{ 
+    color: #00558a;
+  }
+  .nav-bar1 ul li a {
+    text-decoration: none;
+  }
+  .nav-bar1 ul{
+list-style-type: none; 
+  }
+  .nav-bar2{
+    margin-left: auto;
+  }
+  .nav-bar2 ul{
+    list-style-type: none;
+  }
+  .nav-bar2 a{
+    color: #00558a;
+    text-decoration: none;
+  }
+  .web-dev-text2{
+    margin-left: 30px;
+    word-spacing:5px ;
+    letter-spacing: 0.2px;
+    color: rgb(98, 97, 97);
+  }
+  .nav-bar1 a:hover,.nav-bar2 a:hover{
+    color: #51bcff;
+  }
+  #welcomeMessage{
+    color: rgb(35, 2, 225);
+    font-size: 30px;
+    margin-top: 60px;
+  }
+  .remember-me{
+  margin-right: 55px;
+  margin-bottom: 0px;
+  padding: 0;
+  font-size: 13px;
+  }
+  #rememberMe{
+    margin-top: 10px;
+  }
+  @media (max-width:600px){
+    body{
+      font-size: 10px;
+    }
+    .logo-nav{
+      font-size: 30px;
+    }
+   
+    .nav-bar{
+      margin-top: 50px;
+      font-size: 8px;
+      display: inline;
+    }
+   
+    .a-login{
+      width: 60px;
+margin-left: 10px;
+    }
+ 
+    .computer-img{
+      width: 170px;
+      height: 120px;
+      margin-right: 60px;
+      border-radius: 30px;
+    }
+    .body{
+display: block;
+    }
+    .right-side{
+      margin-top: 0;
+      margin-left: 0;
+    }
+    .pragraph-right-side{
+      font-size: 15px;
+    }
+    .login-form{
+      width: fit-content;
+    }
+    .label{
+      margin-right: 110px;
+    }
+  }
+  .button-text{
+  vertical-align: middle;
+  }
+ @media (min-width:601px) and (max-width:827px){
+.body{
+  margin-left: auto;
+}
+.nav-bar{
+flex-direction: column;
+}
+
+.right-side{
+  margin-left: 50px;
+
+}
+.login-form{
+  width:300px;
+}
+.computer-img{
+  width: 250px;
+  height: 200px;
+  margin-left: 40px;
+  margin-top: 120px;
+}
+ }
+ @media (min-width:827px) {
+  .computer-img{
+    width:350px ;
+    height:250px ;
+    margin-top: 120px;
+  }
+  .body{
+    margin-left: 300px;
+  }
+ }
+ @media (min-width:827px) and (max-width:1040px){
+  .body{
+    margin-left: 70px;
+  }
+ }
+ 
